@@ -84,7 +84,42 @@ Go through with the learners how to iterate through an array with a collection l
 
 ## Break
 
-## Creating our first iOS Hello World App (45 mins)
+## Creating our first iOS App (45 mins)
 
+### Purpose 
+This will build on the simple fundamentals covered from the previous lesson into a practical project. This will help show the learners how easy and quickly they can put together a simple app using Swift.
 
+### Learning Objectives
+By the end of this lesson, learners will be able to:
+1. Use the XCode IDE to build a simple native iOS app
+1. Know their way around the IDE
+1. Configure their own iOS device to work with the application they just built
+1. Know how to use Story Boards
+1. Know the different types of Controllers and tool elements available to them
+
+### Setup and Walkthrough (20 mins)
+Make sure that XCode is updated to the latest version, the OS will tell you if it needs an update or once you open the application for the first time in a while - it will start to install an update to the IDE.
+
+Open up XCode or if you already have it open, go to ```File -> New -> Project -> Single View App -> Next```. Pause on this screen and explain that Product Name is the name of the project, and Organization Identifier should be either their own personal name or the company they are associated with for the particular project. Make sure to emphasis that the language should be set to Swift and the User Interface is set to StoryBoard. Once all of that is checked off, click next and select where on your machine you want to store the project and finally click on Create.
+
+Next walk the learners through the IDE as it will look completely different from the playground they were using to learn Swift. The left panel is the Navigator Menu and it lists all the files associated with your project, the right side panel is the Inspector and it will automatically update with whatever element is selected when adding them to your storyboard. The main middle window is where the main editor will live for all the files. They will be able to hide or show the two side panels and even the debug/error console panel from the upper right hand side controls. Currently they should see the project highlighted with the 'General' tab selected, make sure they are able to verify that all the information they put in on the create screen is correct as bundle identifiers need to be unique (dont worry, XCode will tell you if it is not when you try to deploy the app onto a phone).
+
+The next step is for them to plug in their phones to use for displaying the app when its created or for those that do not have iOS devices, they can use the simulator built-into XCode for now. Next have them go up to the top where they can select either the simulator device or the device they have selected and then click on the play icon to load the app onto the phone but they will have to unlock and approve the app to use in the 'general' section of their phone, once accepted, the app will load. The learners using the simulator will work automatically. Thats it! They should all see a 'Hello World' Screen!
+
+### Editing the app (25 mins)
+Now after congratulating the learners on coming this far - lets have them edit the template and put their own personal touches on it. 
+
+Explain that the project will always need the AppDelegate file as it is what the app uses to load the project to the screen and controls elements as to the behavior of the app when it is not being used and is in the background, what to do when it first loads after being the background, etc (remember iOS devices have multiple threads that help to handle all this but we are able to control the app to that level). Next have them go over to the Storyboard file and show them they can add elements to the screen using the '+' button on the upper right of the editor. 
+
+#### Instructor-Do 
+Show how to add elements to the screen and then run the app again to show the updated version. Next click on any elements to show they dont do anything and this is where everything we learned with syntax comes into play.
+
+### Link elements from storyboard to file.
+The default ViewController is linked to the StoryBoard (you can verify and show that by clicking on the indentity inspector of the Storyboard and see the class name is the name of the ViewController file). To link the elements to the file, we need to open up the 'Assistant Editor' which is marked under the 3 bar button in the main window. You can hide the other views if you need more screen real estate. Once you see the file, you simply click on the element you wish to be able to use in your app and hold down the control button and dragging it to file editor. Once you release your click, you will be prompted to set the element as a variable in the element, confirm what you want to reference the element in the code behind and it will be added as an object element. Do this for all the elements you will be using.
+
+#### We-Do
+We will now be using what we've learned with linking and drag and dropping with the storoyboard to create a login screen. Dont worry too much about the logic of the buttons (keep it simple at first with print statements to the console to show they are registering when clicked).
+
+#### They-Do
+After they have a template of how to use storyboard and the assistant editor, challenge them to change the login to a register screen.
 
